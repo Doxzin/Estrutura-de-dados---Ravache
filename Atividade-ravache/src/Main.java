@@ -11,6 +11,8 @@ public class Main {
 
         System.out.println("preOrdem");
         arvore.preOrdem((arvore.getRaiz()));
+        System.out.println("preOrdem");
+        arvore.preOrdem((arvore.getRaiz()));
     }
 }
 

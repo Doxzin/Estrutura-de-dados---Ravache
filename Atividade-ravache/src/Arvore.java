@@ -33,4 +33,10 @@ public class Arvore {
             preOrdem(no.getDireito());
         }
     }
+    public void emOrdem (No no){
+        if (no != null);
+        emOrdem(no.getEsquerdo());
+        System.out.println(no.getValor());
+        emOrdem(no.getDireito());
+    }
 }
