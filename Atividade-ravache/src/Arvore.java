@@ -35,8 +35,15 @@ public class Arvore {
     }
     public void emOrdem (No no){
         if (no != null);
-        emOrdem(no.getEsquerdo());
-        System.out.println(no.getValor());
-        emOrdem(no.getDireito());
+            emOrdem(no.getEsquerdo());
+            System.out.println(no.getValor());
+            emOrdem(no.getDireito());
+    }
+    public void posOrdem (No no) {
+        if (no != null) {
+            posOrdem(no.getEsquerdo());
+            posOrdem(no.getDireito());
+            System.out.println((no.getValor()));
+        }
     }
 }

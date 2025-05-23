@@ -11,8 +11,10 @@ public class Main {
 
         System.out.println("preOrdem");
         arvore.preOrdem((arvore.getRaiz()));
-        System.out.println("preOrdem");
-        arvore.preOrdem((arvore.getRaiz()));
+        System.out.println("emOrdem");
+        arvore.emOrdem((arvore.getRaiz()));
+        System.out.println("posOrdem");
+        arvore.posOrdem((arvore.getRaiz()));
     }
 }
 
