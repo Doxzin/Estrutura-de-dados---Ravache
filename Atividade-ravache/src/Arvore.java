@@ -63,7 +63,8 @@ public class Arvore {
             }
         }
     }
-    public void posOrdemNR(No raiz){
+
+    public void posOrdemNR(No raiz) {
         if (raiz == null) return;
 
         Stack<No> pilha1 = new Stack<>();
@@ -71,17 +72,18 @@ public class Arvore {
 
         pilha1.push(raiz);
 
-        while (!pilha1.isEmpty()){
+        while (!pilha1.isEmpty()) {
             No no = pilha1.pop();
             pilha2.push(no);
 
-            if(no.getEsquerdo() != null ) pilha1.push(no.getEsquerdo());
-            if(no.getDireito() != null ) pilha1.push(no.getDireito());
+            if (no.getEsquerdo() != null) pilha1.push(no.getEsquerdo());
+            if (no.getDireito() != null) pilha1.push(no.getDireito());
         }
-        while (!pilha2.isEmpty()){
+        while (!pilha2.isEmpty()) {
             System.out.print(pilha2.pop().getValor() + " ");
         }
     }
+
     public void emNivel(No raiz) {
         if (raiz == null) return;
 
@@ -100,5 +102,31 @@ public class Arvore {
         while (!pilha2.isEmpty()) {
             System.out.print(pilha2.pop().getValor() + " ");
         }
+    }
+
+    public int contarF(No raiz) {
+        if (raiz == null)
+            return 0;
+
+        Stack<No> pilha = new Stack<>();
+        int contador = 0;
+        pilha.push(raiz);
+
+        while (!pilha.isEmpty()) {
+            No atual = pilha.pop();
+
+            if (atual.getEsquerdo() == null && atual.getDireito() == null) {
+                contador++;
+            }
+
+            if (atual.getDireito() != null) {
+                pilha.push(atual.getDireito());
+            }
+            if (atual.getEsquerdo() != null) {
+                pilha.push(atual.getEsquerdo());
+            }
+        }
+
+        return contador;
     }
 }

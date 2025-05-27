@@ -23,6 +23,9 @@ public class Main {
         System.out.println();
         System.out.println("emNivel");
         arvore.emNivel((arvore.getRaiz()));
+        System.out.println();
+        System.out.println();
+        System.out.println("Número de Folhas: " + arvore.contarF(arvore.getRaiz()));
     }
 }
 
