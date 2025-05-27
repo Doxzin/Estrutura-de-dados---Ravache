@@ -29,14 +29,15 @@ public class Arvore {
             return 1 + esquerda + direita;
         }
     }
-    public void preOrdemIte(No raiz){
-        if (raiz == null) return;
-            Stack<No> pilha= new Stack<>();
-            pilha.push(raiz);
 
-            while(!pilha.isEmpty()) {
+    public void preOrdemNR(No raiz) {
+        if (raiz == null) return;
+        Stack<No> pilha = new Stack<>();
+        pilha.push(raiz);
+
+        while (!pilha.isEmpty()) {
             No atual = pilha.pop();
-            System.out.println(atual.getValor());
+            System.out.print(atual.getValor() + " ");
             if (atual.getDireito() != null) {
                 pilha.push(atual.getDireito());
             }
@@ -44,6 +45,22 @@ public class Arvore {
                 pilha.push(atual.getEsquerdo());
             }
         }
+    }
 
+    public void emOrdemNR(No raiz) {
+        Stack<No> pilha = new Stack<>();
+        No atual = raiz;
+
+        while (atual != null || !pilha.isEmpty()) {
+            while (atual != null) {
+                pilha.push(atual);
+                atual = atual.getEsquerdo();
+            }
+            if (!pilha.isEmpty()) {
+                atual = pilha.pop();
+                System.out.print(atual.getValor() + " ");
+                atual = atual.getDireito();
+            }
+        }
     }
 }

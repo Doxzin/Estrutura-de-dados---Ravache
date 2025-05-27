@@ -9,8 +9,12 @@ public class Main {
         arvore.getRaiz().getEsquerdo().setDireito(new No("E"));
         arvore.getRaiz().getDireito().setDireito(new No("F"));
 
-        System.out.println("preOrdemIte");
-        arvore.preOrdemIte((arvore.getRaiz()));
+        System.out.println("preOrdemNR");
+        arvore.preOrdemNR((arvore.getRaiz()));
+        System.out.println();
+        System.out.println();
+        System.out.println("emOrdemNR");
+        arvore.emOrdemNR((arvore.getRaiz()));
     }
 }
 
