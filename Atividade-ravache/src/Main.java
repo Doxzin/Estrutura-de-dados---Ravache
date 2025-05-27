@@ -17,8 +17,12 @@ public class Main {
         arvore.emOrdemNR((arvore.getRaiz()));
         System.out.println();
         System.out.println();
-        System.out.println("posOrdem");
+        System.out.println("posOrdemNR");
         arvore.posOrdemNR((arvore.getRaiz()));
+        System.out.println();
+        System.out.println();
+        System.out.println("emNivel");
+        arvore.emNivel((arvore.getRaiz()));
     }
 }
 
