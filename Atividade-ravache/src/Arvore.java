@@ -63,4 +63,23 @@ public class Arvore {
             }
         }
     }
+    public void posOrdemNR(No raiz){
+        if (raiz == null) return;
+
+        Stack<No> pilha1 = new Stack<>();
+        Stack<No> pilha2 = new Stack<>();
+
+        pilha1.push(raiz);
+
+        while (!pilha1.isEmpty()){
+            No no = pilha1.pop();
+            pilha2.push(no);
+
+            if(no.getEsquerdo() != null ) pilha1.push(no.getEsquerdo());
+            if(no.getDireito() != null ) pilha1.push(no.getDireito());
+        }
+        while (!pilha2.isEmpty()){
+            System.out.print(pilha2.pop().getValor() + " ");
+        }
+    }
 }

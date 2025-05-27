@@ -15,6 +15,10 @@ public class Main {
         System.out.println();
         System.out.println("emOrdemNR");
         arvore.emOrdemNR((arvore.getRaiz()));
+        System.out.println();
+        System.out.println();
+        System.out.println("posOrdem");
+        arvore.posOrdemNR((arvore.getRaiz()));
     }
 }
 
